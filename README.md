@@ -3,7 +3,7 @@ Storing the details about the Games played by the participants and scores earned
 
 # Architecture
 
-
+![](AWS Architectture.PNG)
 # S3
 
 # AWS CloudFront
