@@ -20,9 +20,19 @@ The key tool in CloudFormation is a template. A CloudFormation template is just 
 
 # AWS Lambda
 
+AWS Lambda is a way to run code without creating, managing, or paying for servers. You supply AWS with the code required to run your function, and you pay for the time AWS runs it.Your code can access any other AWS service or it can run on its own. While there are some rules about how long a function has to respond to a request, there’s almost no limit to what your Lambda can do.AWS will scale your code for you, depending on the number of requests it receives. 
+
 # API Gateway
+
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
+
+API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, CORS support, authorization and access control, throttling, monitoring, and API version management. API Gateway has no minimum fees or startup costs. You pay for the API calls you receive and the amount of data transferred out and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
 
 # DynamoDB
 
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications.
+
 # AWS Cognito
+
+Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
 
