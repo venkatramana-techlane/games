@@ -13,7 +13,6 @@ The metadata is used by S3 and includes things like file type and modified date,
 
 
 # What is S3 ?
-=================================
 - S3 stands for Simple Storage Service.
 - It provides object storage through a web service interface.
 - Each object is stored as a file with its metadata included and is given an ID number.
@@ -27,7 +26,7 @@ The metadata is used by S3 and includes things like file type and modified date,
 - Designed for storing online backup and archiving of data and applications on AWS.
 - Its mainly designed with the minimal features that can easily set and also to create the web-scale computing in an easy way.
 
-## Storage classes provided are:
+### Storage classes provided are:
 1 Standard
 2 Standard_IA i.e., Standard Infrequent Access
 3 Intelligent_Tiering
