@@ -27,12 +27,12 @@ The metadata is used by S3 and includes things like file type and modified date,
 - Its mainly designed with the minimal features that can easily set and also to create the web-scale computing in an easy way.
 
 ### Storage classes provided are:
-1 Standard
-2 Standard_IA i.e., Standard Infrequent Access
-3 Intelligent_Tiering
-4 OneZone_IA
-5 Glacier
-6 Deep_Archive
+1. Standard
+2. Standard_IA i.e., Standard Infrequent Access
+3. Intelligent_Tiering
+4. OneZone_IA
+5. Glacier
+6. Deep_Archive
 
 - RRS i.e., Reduced Redundancy Storage (Not recommended by AWS)
 - Data access is provided through S3 Console which is a simple web-based interface.
