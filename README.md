@@ -27,7 +27,8 @@ Uses the same scalable storage infrastructure that Amazon.com uses to run its gl
 Designed for storing online backup and archiving of data and applications on AWS.
 Its mainly designed with the minimal features that can easily set and also to create the web-scale computing in an easy way.
 
-# Storage classes provided are:
+Storage classes provided are:
+=================================
 
 Standard
 Standard_IA i.e., Standard Infrequent Access
