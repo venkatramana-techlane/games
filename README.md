@@ -12,6 +12,38 @@ Simple Storage Service, shortened to S3, is one of the oldest services in AWS. S
 The metadata is used by S3 and includes things like file type and modified date, as well as any custom metadata added. S3 doesn't care what type of object it is, and the maximum file size limit is essentially a joke except in the most extraordinary circumstances.
 
 
+# What is S3 ?
+=================================
+# S3 stands for Simple Storage Service.
+It provides object storage through a web service interface.
+*Each object is stored as a file with its metadata included and is given an ID number.
+Objects uploaded to S3 are stored in containers called “Buckets”, whose names are “unique” and they organize the Amazon S3 namespace at the highest level.
+These buckets are region specific.
+You can assign permissions to these buckets, in order to provide access or restrict data transaction.
+Applications use this ID number to access an object.
+Developers can access an object via a REST API.
+Supports upload of objects.
+Uses the same scalable storage infrastructure that Amazon.com uses to run its global e-commerce network.
+Designed for storing online backup and archiving of data and applications on AWS.
+Its mainly designed with the minimal features that can easily set and also to create the web-scale computing in an easy way.
+
+# Storage classes provided are:
+
+Standard
+Standard_IA i.e., Standard Infrequent Access
+Intelligent_Tiering
+OneZone_IA
+Glacier
+Deep_Archive
+
+RRS i.e., Reduced Redundancy Storage (Not recommended by AWS)
+Data access is provided through S3 Console which is a simple web-based interface.
+Data stored can be either Public or Private based on user requirement.
+Data stored can be encrypted.
+We can define life-cycle policies which can help in automation of data transfer, retention and deletion.
+Amazon Athena can be used to "query" S3 data as per demand.
+
+
 # AWS CloudFront
 
 CloudFormation is a tool offered by Amazon to use configuration data to create and configure resources in AWS. Almost any AWS resource can be created using CloudFormation, from a security group to an EC2 Auto Scaling group. CloudFormation allows you to perfectly create groups of resources over and over again due to the static nature of the templates used to create those resources.
