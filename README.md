@@ -5,7 +5,7 @@ Storing the details about the Games played by the participants and scores earned
 
 ![](images/AWS%20Architectture.PNG)
 
-# What is S3 ?
+# S3 
 - S3 stands for Simple Storage Service.
 - It provides object storage through a web service interface.
 - Each object is stored as a file with its metadata included and is given an ID number.
@@ -19,7 +19,7 @@ Storing the details about the Games played by the participants and scores earned
 - Designed for storing online backup and archiving of data and applications on AWS.
 - Its mainly designed with the minimal features that can easily set and also to create the web-scale computing in an easy way.
 
-### Storage classes provided are:
+Storage classes provided :
 1. Standard
 2. Standard_IA i.e., Standard Infrequent Access
 3. Intelligent_Tiering
@@ -36,26 +36,60 @@ Storing the details about the Games played by the participants and scores earned
 
 
 # AWS CloudFront
-
-CloudFormation is a tool offered by Amazon to use configuration data to create and configure resources in AWS. Almost any AWS resource can be created using CloudFormation, from a security group to an EC2 Auto Scaling group. CloudFormation allows you to perfectly create groups of resources over and over again due to the static nature of the templates used to create those resources.
-
-The key tool in CloudFormation is a template. A CloudFormation template is just a JSON document that contains the configuration information for AWS resources and how they relate. You can create this template document as a file and check it into version control to track changes to your infrastructure and make it easy to roll back if needed. These templates can often be massive documents when you have a large amount of infrastructure to create. 
+- Amazon CloudFront is a content delivery network (CDN) offered by AWS.
+- CDN provide globally-distributed network of proxy servers which cache content, i.e., web videos or other bulky media, more locally to consumers, thus improving access speed for downloading the content.
+- CloudFront service works on pay-as-you-go basis.
+- CloudFront works with origin server i.e., S3, EC2 where the content is stored, and is pushed out to multiple CloudFront servers as content is requested.
+- When CloudFront is enabled, the content is stored on the main S3 server.
+- Copies of this content are created on a network of servers around the world called CDN.
+- Each server within this network is called an Edge server, which will only have a copy of your content.
+- When a request is made to the content, user is provided from the nearest edge server.
+- CloudFront has features similar to dynamic site acceleration, a method used to improve online content delivery.
+- CloudFront accelerates the delivery of dynamic content by moving it closer to the user to minimize internet hops involved in retrieving the content.
+- CloudFront's Web distribution support "Progressive" download i.e., data from S3 is cached and then streamed without disruptions.
+- Due to this the user cannot move front or back in the video i.e., the video is processed bit by bit.
+- CloudFront's Web distribution support "Streaming" i.e., it allows users to directly watch without any download.
+- Due to this the user can move front or back in the video, and the latency is very less i.e., the latency is based on the size of the file and the customer Internet bandwidth.
+- This service is beneficial for those developing a website that distributes a lot of content that needs to scale-up.
+-   It helps reduce costs and improve the performance of a website by providing high data transfer speeds, low latency
 
 # AWS Lambda
+1.	AWS Lambda service allows you to run code without provisioning or managing dedicated servers. 
+2.	In other words, Lambda will be called Serverless Computing.
+3.	The interesting feature about lambda is you only need to pay for the compute time you consume and no need to pay when your code is not running.
+4.	you can run code for virtually any type of application with zero administration with the help of AWS Lambda functions.
+5.	Just upload your code to Lambda and it will take care of everything required to run and scale your code with high availability
+6.	We can set triggering events for our lambda function when to run or when to get triggered.
+7.	Lambda currently supports various languages such as java, python, node js, c, etc using which you can write your lambda function.
 
-AWS Lambda is a way to run code without creating, managing, or paying for servers. You supply AWS with the code required to run your function, and you pay for the time AWS runs it.Your code can access any other AWS service or it can run on its own. While there are some rules about how long a function has to respond to a request, there’s almost no limit to what your Lambda can do.AWS will scale your code for you, depending on the number of requests it receives. 
 
 # API Gateway
+- Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. 
+- APIs act as the front door for applications to access data, business logic, or functionality from your backend services. 
+- API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, CORS support, authorization and access control, throttling, monitoring, and API version management. 
+- Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.      
+- AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume.
+- With Lambda, you can run code for virtually any type of application or backend service - all with zero administration. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.    
 
-Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. APIs act as the "front door" for applications to access data, business logic, or functionality from your backend services. Using API Gateway, you can create RESTful APIs and WebSocket APIs that enable real-time two-way communication applications. API Gateway supports containerized and serverless workloads, as well as web applications.
-
-API Gateway handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrent API calls, including traffic management, CORS support, authorization and access control, throttling, monitoring, and API version management. API Gateway has no minimum fees or startup costs. You pay for the API calls you receive and the amount of data transferred out and, with the API Gateway tiered pricing model, you can reduce your cost as your API usage scales.
 
 # DynamoDB
-
-Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications.
-
-# AWS Cognito
-
-Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
+- DynamoDB is fast and flexible NoSQL database and it's for applications that need consistent single digit millisecond latency at any scale.And it's a fully managed database and it supports both document and key value data models.
+- It has a really flexible data model.So that means that you don't need to define your database schema upfront and it has really reliable performance as well.
+- And all of these attributes make it a really good fit for mobile gaming, ad-tech, IoT and many other applications.
+DynamoDB Tables:
+DynamoDB tables consist of 
+1. Item (Think of a row of data in a table).
+2. Attributes ((Think of a column of data in a table).
+3. Supports key-value and document data structures.
+4. Key= the name of the data.  Value= the data itself.
+5. Document can be written in JSON, HTML or XML.
+DynamoDB- Primary Keys:
+- DynamoDB stores and retrieve data based on Primary key
+- There are 2 types of Primary Key. Partition Key - Unique attribute
+- Value of the partition key is input to an internal hash function which determines the partition or physical location of which the data is stored.
+- If you are using the partition key as your Primary key, then no items have the same Partition key.
+- Composite Keys (Partition Key + Sort Key) in Combination.
+- 2 items may have same partition key but they must have a different sort key.
+- All items with the same partition key are stored together, then sorted according to the sort key value.
+- Allows you to store multiple items with the same partition keys.
 
